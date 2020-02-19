@@ -15,5 +15,7 @@ public interface UserRepository extends JpaRepository<UserBO, Long> ,JpaSpecific
     @Query(value = "select * from sys_user u where u.user_name = ?1 and u.pass_word = ?2 ",nativeQuery = true)
     UserBO findUserByUserNameAndPassword(String userName, String password);
 
+    @Query(value = "select * from sys_user u where u.id = ?1 ",nativeQuery = true)
+    UserBO findUserById(long userId);
 }
 

@@ -16,7 +16,7 @@ public interface UserService {
 
     UserDTO findUserByUserNameAndPassword(String userName, String password);
 
-    UserDTO findUserByUserId(long userId);
+    UserDTO findUserByUserId(Long userId);
 
     List<UserDTO> findAll();
 }

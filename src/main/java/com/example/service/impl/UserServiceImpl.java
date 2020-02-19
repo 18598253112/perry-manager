@@ -38,8 +38,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDTO findUserByUserId(long userId) {
-        return null;
+    public UserDTO findUserByUserId(Long userId) {
+        UserBO userBO = userRepository.findUserById(userId);
+        return userMapper.toDto(userBO);
     }
 
     @Override
